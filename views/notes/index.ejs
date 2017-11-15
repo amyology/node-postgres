@@ -1,0 +1,9 @@
+<h1><%= title %></h1>
+
+<% for(var i=0; i < data.length; i++) { %>
+  <p>
+    <%= data[i].id %>. <%= data[i].title %><br>
+    by <%= data[i].author %><br>
+    <%= data[i].message %><br>
+  </p>
+<% } %>
