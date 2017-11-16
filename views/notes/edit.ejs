@@ -1,0 +1,18 @@
+<h1>Edit Note</h1>
+
+<form action="/notes/update" method="post">
+  Title:<br>
+  <input type="text" name="title" value="<%= note.title %>"> <br>
+
+  Author:<br>
+  <input type="text" name="author" value="<%= note.author %>"> <br>
+
+  Message:<br>
+  <input type="text" name="message" value="<%= note.message %>"> <br>
+
+  <input type="hidden" name="id" value="<%= note.id %>">
+
+  <input type="submit" value="Submit">
+</form>
+
+<p><a href="/notes/destroy/<%= note.id %>">Delete</a></p>

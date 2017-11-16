@@ -1,9 +1,11 @@
-<h1><%= title %></h1>
+<h1>Notes</h1>
 
-<% for(var i=0; i < data.length; i++) { %>
+<p><a href="/notes/new">New note</a></p>
+
+<% for (var i=0; i < notes.length; i++) { %>
   <p>
-    <%= data[i].id %>. <%= data[i].title %><br>
-    by <%= data[i].author %><br>
-    <%= data[i].message %><br>
+    <b><a href="/notes/<%= notes[i].id %>"><%= notes[i].title %></a></b> <br>
+    <i>by <%= notes[i].author %></i> <br>
+    <%= notes[i].message %>
   </p>
 <% } %>
